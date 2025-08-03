@@ -84,11 +84,11 @@ export interface DemoProof {
     
     switch (proofType) {
       case 'vaccination':
-        isValid = userData.vaccinated;
+        isValid = userData.vaccinated ?? false;
         processingTime = 1200;
         break;
       case 'age':
-        isValid = userData.age >= 18;
+        isValid = (userData.age ?? 0) >= 18;
         processingTime = 800;
         break;
       case 'health':

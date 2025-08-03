@@ -22,20 +22,17 @@ export class ProofService {
       const privateData = {
         vaccinated: userData.vaccinated,
         age: userData.age,
-        healthStatus: userData.healthStatus,
-        personalInfo: {
-          name: userData.name,
-          id: userData.id
-        }
+        healthStatus: userData.healthStatus
       };
 
       const publicRequirements = {
-        proofType,
-        requirements: this.getRequirements(proofType)
+        vaccinationRequired: proofType === 'vaccination',
+        minimumAge: proofType === 'age' ? 18 : undefined,
+        healthScoreRequired: proofType === 'health' ? 80 : undefined
       };
 
       const request: TaceoProofRequest = {
-        userId: userData.id,
+        userId: 'demo-user',
         proofType,
         privateData,
         publicRequirements

@@ -52,7 +52,7 @@ export interface TaceoProofRequest {
           break;
   
         case 'age':
-          if (request.privateData.age >= 18) {
+          if ((request.privateData.age ?? 0) >= 18) {
             proofData = `zkp://taceo.network/proof/${proofId}`;
             message = 'Age verification proof generated successfully';
           } else {
