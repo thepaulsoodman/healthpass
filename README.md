@@ -1,6 +1,6 @@
 # HealthPass TACEO Demo
 
-A professional demonstration of TACEO's collaborative zero-knowledge proof system for health verification scenarios.
+A demonstration of TACEO's collaborative zero-knowledge proof system for health verification scenarios.
 
 ## 🏥 Overview
 
@@ -60,31 +60,6 @@ src/
 4. User can verify proof or generate QR code for sharing
 5. Proof verification confirms validity through TACEO's verification system
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-```bash
-# Clone the repository
-git clone <repository-url>
-cd healthpass-demo
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Build for Production
-```bash
-npm run build
-npm start
-```
-
 ## 🎨 UI/UX Features
 
 - **Ultra-Dark Theme**: Professional dark design with glass morphism
@@ -105,10 +80,6 @@ This demo simulates TACEO's concepts without using actual coCircom or Noir imple
 ## 📝 License
 
 This project is for demonstration purposes only.
-
-## 🤝 Contributing
-
-This is a demo project showcasing TACEO's technology concepts.
 
 ---
 
