@@ -60,7 +60,7 @@ src/
 4. User can verify proof or generate QR code for sharing
 5. Proof verification confirms validity through TACEO's verification system
 
-## 🎨 UI/UX Features
+## 🎨 UI/UX Features *
 
 - **Ultra-Dark Theme**: Professional dark design with glass morphism
 - **Smooth Animations**: 2-second proof detail animations, 1.5-second loaders
