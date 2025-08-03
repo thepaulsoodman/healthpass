@@ -478,7 +478,7 @@ export default function HealthPassDemo() {
           <div className="bg-black/40 rounded-lg p-4 border border-slate-700/50">
             <h4 className="text-lg font-semibold text-blue-400 mb-3 font-mono">TACEO CoSNARK Technology</h4>
             <div className="space-y-3 text-sm text-slate-200 font-mono">
-              <p>This demo shows how TACEO's collaborative zero-knowledge proof system works in real-world health verification scenarios.</p>
+              <p>This demo shows how TACEO&apos;s collaborative zero-knowledge proof system works in real-world health verification scenarios.</p>
               
               <div className="space-y-2">
                 <p>The demo showcases CoSNARK technology enabling collaborative SNARK proof generation across multiple parties.</p>
@@ -515,7 +515,7 @@ export default function HealthPassDemo() {
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-xs text-white">5</div>
-                <span>Proof verification confirms validity through TACEO's verification system</span>
+                <span>Proof verification confirms validity through TACEO&apos;s verification system</span>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ export class DemoTaceoService {
           proof,
           message: `TACEO proof generated successfully`,
           details: {
-            ...this.getProofDetails(proofType, userData),
+            ...this.getProofDetails(proofType),
             circuitInfo: {
               name: proof.circuitInfo.name,
               constraints: proof.circuitInfo.constraints,
@@ -107,7 +107,7 @@ export class DemoTaceoService {
     }
   }
 
-  private getProofDetails(proofType: string, userData: DemoUserData) {
+  private getProofDetails(proofType: string) {
     const privateDataHidden = [
       'Personal identification',
       'Exact dates and times',

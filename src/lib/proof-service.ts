@@ -47,20 +47,20 @@ export class ProofService {
           proofData: result.proofData,
           verificationKey: result.verificationKey,
           message: result.message,
-          details: this.getProofDetails(proofType, userData)
+          details: this.getProofDetails(proofType)
         };
       } else {
         return {
           success: false,
           message: result.message,
-          details: this.getProofDetails(proofType, userData)
+          details: this.getProofDetails(proofType)
         };
       }
     } catch (error) {
       return {
         success: false,
         message: `Error generating proof: ${error}`,
-        details: this.getProofDetails(proofType, userData)
+        details: this.getProofDetails(proofType)
       };
     }
   }
@@ -78,7 +78,7 @@ export class ProofService {
     }
   }
 
-  private getProofDetails(proofType: string, userData: DemoUserData) {
+  private getProofDetails(proofType: string) {
     const privateDataHidden = [
       'Personal identification',
       'Exact dates and times',
