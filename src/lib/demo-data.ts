@@ -23,8 +23,14 @@ export interface DemoProof {
     name: string;
     description: string;
     constraints: number;
-    inputs: any;
-    outputs: any;
+    inputs: Record<string, string>;
+    outputs: Record<string, string>;
+  }
+
+  export interface DemoUserData {
+    vaccinated?: boolean;
+    age?: number;
+    healthStatus?: string;
   }
   
   export const demoCircuits = {
@@ -67,7 +73,7 @@ export interface DemoProof {
   };
   
   export const generateDemoProof = (
-    userData: any,
+    userData: DemoUserData,
     proofType: 'vaccination' | 'age' | 'health'
   ): DemoProof => {
     const circuit = demoCircuits[proofType];

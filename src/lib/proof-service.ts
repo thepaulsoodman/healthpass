@@ -1,4 +1,5 @@
 import { taceoClient, TaceoProofRequest } from './taceo-client';
+import { DemoUserData } from './demo-data';
 
 export interface ProofGenerationResult {
   success: boolean;
@@ -14,7 +15,7 @@ export interface ProofGenerationResult {
 
 export class ProofService {
   async generateHealthProof(
-    userData: any,
+    userData: DemoUserData,
     proofType: 'vaccination' | 'age' | 'health'
   ): Promise<ProofGenerationResult> {
     try {
@@ -80,7 +81,7 @@ export class ProofService {
     }
   }
 
-  private getProofDetails(proofType: string, userData: any) {
+  private getProofDetails(proofType: string, userData: DemoUserData) {
     const privateDataHidden = [
       'Personal identification',
       'Exact dates and times',

@@ -6,20 +6,28 @@ export interface QRCodeData {
   proofData: string;
   timestamp: number;
   networkInfo: {
-    nodeCount: number;
+    infrastructureStatus: string;
+    processingTime: number;
     networkFee: string;
   };
 }
 
+export interface NetworkInfo {
+  infrastructureStatus: string;
+  processingTime: number;
+  networkFee: string;
+}
+
 export class QRService {
-  generateQRData(proofId: string, verificationKey: string, proofData: string, networkInfo: any): QRCodeData {
+  generateQRData(proofId: string, verificationKey: string, proofData: string, networkInfo: NetworkInfo): QRCodeData {
     return {
       proofId,
       verificationKey,
       proofData,
       timestamp: Date.now(),
       networkInfo: {
-        nodeCount: networkInfo.nodeCount,
+        infrastructureStatus: networkInfo.infrastructureStatus,
+        processingTime: networkInfo.processingTime,
         networkFee: networkInfo.networkFee
       }
     };

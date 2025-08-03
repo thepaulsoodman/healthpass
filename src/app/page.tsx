@@ -154,31 +154,6 @@ export default function HealthPassDemo() {
     }
   };
 
-  const formatProofResult = (result: DemoProofResult) => {
-    if (result.success && result.proof) {
-      return `✅ ${result.message}\n\n` +
-             `🔒 Private Data Hidden:\n` +
-             `${result.details.privateDataHidden.map(item => `- ${item}`).join('\n')}\n\n` +
-             `📋 Public Verification:\n` +
-             `${result.details.publicVerification.join('\n')}\n\n` +
-             ` Proof ID: ${result.proof.proofId}\n` +
-             `🔐 Verification Key: ${result.proof.verificationKey}\n\n` +
-             `⚡ Circuit Info:\n` +
-             `- Circuit: ${result.details.circuitInfo.name}\n` +
-             `- Description: ${result.details.circuitInfo.description}\n` +
-             `- Constraints: ${result.details.circuitInfo.constraints}\n` +
-             `- Proving time: ${result.details.circuitInfo.provingTime}ms\n\n` +
-             `🌐 Network Info:\n` +
-             `- Infrastructure status: ${result.details.networkInfo.infrastructureStatus}\n` +
-             `- Processing time: ${result.details.networkInfo.processingTime}ms\n` +
-             `- Network fee: ${result.details.networkInfo.networkFee}\n\n` +
-             `🔬 TACEO Features Used:\n` +
-             `${result.details.taceoFeatures.map(feature => `- ${feature}`).join('\n')}`;
-    } else {
-      return `❌ ${result.message}`;
-    }
-  };
-
   const formatVerificationResult = (result: VerificationResult) => {
     return `${result.message}\n\n` +
            `⏱️ Verification time: ${result.verificationTime}ms\n` +
@@ -512,10 +487,10 @@ export default function HealthPassDemo() {
                 
                 <p>The system uses Zero-Knowledge Proofs to prove statements without revealing underlying data, ensuring Privacy Protection where private data stays hidden while only proof verification becomes visible.</p>
                 
-                <p>Finally, it demonstrates proof verification through TACEO's collaborative network infrastructure.</p>
+                <p>Finally, it demonstrates proof verification through TACEO&apos;s collaborative network infrastructure.</p>
               </div>
               
-              <p className="text-xs text-slate-400 mt-2">Note: This demo simulates TACEO's concepts without using actual coCircom or Noir implementations.</p>
+              <p className="text-xs text-slate-400 mt-2">Note: This demo simulates TACEO&apos;s concepts without using actual coCircom or Noir implementations.</p>
             </div>
           </div>
 

@@ -1,9 +1,21 @@
+export interface PrivateData {
+  vaccinated?: boolean;
+  age?: number;
+  healthStatus?: string;
+}
+
+export interface PublicRequirements {
+  vaccinationRequired?: boolean;
+  minimumAge?: number;
+  healthScoreRequired?: number;
+}
+
 export interface TaceoProofRequest {
-    userId: string;
-    proofType: 'vaccination' | 'age' | 'health';
-    privateData: any;
-    publicRequirements: any;
-  }
+  userId: string;
+  proofType: 'vaccination' | 'age' | 'health';
+  privateData: PrivateData;
+  publicRequirements: PublicRequirements;
+}
   
   export interface TaceoProofResult {
     proofId: string;

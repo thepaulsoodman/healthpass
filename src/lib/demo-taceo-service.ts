@@ -1,4 +1,4 @@
-import { generateDemoProof, DemoProof, demoCircuits } from './demo-data';
+import { generateDemoProof, DemoProof, demoCircuits, DemoUserData } from './demo-data';
 
 export interface DemoProofResult {
   success: boolean;
@@ -24,7 +24,7 @@ export interface DemoProofResult {
 
 export class DemoTaceoService {
   async generateProof(
-    userData: any,
+    userData: DemoUserData,
     proofType: 'vaccination' | 'age' | 'health'
   ): Promise<DemoProofResult> {
     try {
@@ -32,11 +32,7 @@ export class DemoTaceoService {
       
       const circuit = demoCircuits[proofType];
       
-      const startTime = Date.now();
-      
       const proof = generateDemoProof(userData, proofType);
-      
-      const processingTime = Date.now() - startTime;
       
       if (proof.verification.status === 'valid') {
         return {
@@ -111,7 +107,7 @@ export class DemoTaceoService {
     }
   }
 
-  private getProofDetails(proofType: string, userData: any) {
+  private getProofDetails(proofType: string, userData: DemoUserData) {
     const privateDataHidden = [
       'Personal identification',
       'Exact dates and times',
